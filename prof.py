@@ -109,9 +109,9 @@ class MemoryProfiler:
                             else:
                                 for y in range(y_start, y_end + 1):
                                     if y == y_start and y_start != y_end:
-                                        stdscr.addch(y, x + 9, "╰" if prev_y < y_pos else "╯")
-                                    elif y == y_end and y_start != y_end:
                                         stdscr.addch(y, x + 9, "╮" if prev_y < y_pos else "╭")
+                                    elif y == y_end and y_start != y_end:
+                                        stdscr.addch(y, x + 9, "╰" if prev_y < y_pos else "╯")
                                     elif y_start != y_end:
                                         stdscr.addch(y, x + 9, "│")
                         prev_y = y_pos
